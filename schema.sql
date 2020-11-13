@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS member (
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INTEGER NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS skill (
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    descs TEXT NOT NULL,
+    member_id BIGINT NOT NULL,
+    FOREIGN KEY (member_id) REFERENCES member(id) ON DELETE RESTRICT
+);

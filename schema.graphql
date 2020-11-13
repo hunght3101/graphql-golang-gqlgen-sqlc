@@ -1,0 +1,38 @@
+type Member {
+   id: ID!
+   name: String!
+   age: Int!
+   skills: [Skill!]!
+}
+
+type Skill {
+   id: ID!
+   name: String!
+   descs: String!
+}
+type Query {
+  member(id: ID!): Member
+  members: [Member!]!
+  skill(id: ID!): Skill
+  skills: [Skill!]!
+}
+
+type Mutation {
+  createMember(data: MemberInput!): Member!
+  updateMember(id: ID!, data: MemberInput!): Member!
+  deleteMember(id: ID!): Member!
+  createSkill(data: SkillInput!): Skill!
+  updateSkill(id: ID!, data: SkillInput!): Skill!
+  deleteSkill(id: ID!): Skill!
+}
+
+input MemberInput {
+  name: String!
+  age: Int!
+}
+
+input SkillInput {
+  name: String!
+  descs: String!
+  member_id: ID!
+}

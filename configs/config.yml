@@ -1,0 +1,7 @@
+Postgresql:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "thuyduong2707"
+  dbName: "gqlgen_sqlc_example_db"
+  sSLMode: "disable"
