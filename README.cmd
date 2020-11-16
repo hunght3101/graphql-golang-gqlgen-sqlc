@@ -24,4 +24,4 @@
                 descs
             }
         }
-* Note: You also could create, update, delete data from database by this program 
+* Note: You also could create, update, delete data from the database by this program 
